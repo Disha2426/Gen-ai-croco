@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Crocodile Fun Facts!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 25px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #fact-display {
+            font-size: 1.2em;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amazing Crocodile Fun Facts!</h1>
+    <div id="fact-display">Click the button to discover a fun fact about crocodiles!</div>
+    <button onclick="generateFact()">Reveal Another Fact</button>
+    <script>
+        const crocodileFacts = [
+            "Crocodiles have 24 teeth and can bite with a force of up to 5,000 pounds per square inch!",
+            "The largest crocodile ever recorded was 23 feet long and weighed over 2,200 pounds!",
+            "Crocodiles can hold their breath underwater for up to 2 hours.",
+            "Crocodiles can run up to 17 miles per hour on land in short bursts.",
+            "Crocodiles can live for up to 70 years in the wild.",
+            "Crocodile mothers are very protective of their young and will fiercely defend them against predators.",
+            "Crocodile hatchlings are only about 8 inches long when they first hatch.",
+            "Crocodiles have a special valve in their throat that allows them to breathe while underwater.",
+            "Crocodiles have a third eyelid called a nictitating membrane that protects their eyes underwater.",
+            "Crocodiles are important predators that help to keep the ecosystems they live in healthy."
+        ];
+
+        function generateFact() {
+            const factDisplay = document.getElementById('fact-display');
+            const randomIndex = Math.floor(Math.random() * crocodileFacts.length);
+            factDisplay.textContent = crocodileFacts[randomIndex];
+        }
+    </script>
+</body>
+</html>
